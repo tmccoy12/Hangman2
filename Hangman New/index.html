@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <title>Hangman</title>
+</head>
+
+<body>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="intro">
+            <div class="boxfather">
+                <div class="box">
+                    <h1>Pirate Hangman</h1>
+                    <button>Start Game</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hangman">
+        <div class="hangman-results">
+            <div class="hangman-hangman">
+                <svg id="hangman-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                    y="0px" viewBox="0 0 400 500" stroke="#000000" fill="none">
+                    <polyline stroke-width="5" stroke-miterlimit="5" points="253.996,142.899 253.996,59.666
+                                                                                                                                                     115.663,59.666 115.663,434.999 "
+                    />
+                    <line stroke-width="5" stroke-miterlimit="5" x1="392.33" y1="434.999" x2="8.33" y2="434.999" />
+                    <g id="added-parts">
+                    </g>
+                </svg>
+            </div>
+            <div class="game-over" style="display: none;">
+                <p class="game-over-won">You won! </p>
+                <p class="game-over-lost">Sorry You Lost!</p>
+                <button id="game-over-replay">Start Over</button>
+            </div>
+        </div>
+        <div class="hangman-puzzle">
+        </div>
+        <div class="hangman-letters">
+        </div>
+    </div>
+    </svg>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="app.js" type="text/javascript"></script>
+
+
+
+
+
+</body>
+
+</html>

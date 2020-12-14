@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+* {
+  box-sizing: border-box;
+ }
+
+ body {
+  color: white;
+  background-image: url("../images/treasure.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin-bottom: auto;
+    font-family:'Pirata One', cursive;
+    line-height: 1; 
+    
+  }
+ /* Welcome Page */
+
+ .jumbotron {
+  color: white;
+  background-image: url("../images/treasure.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin-bottom: auto;
+}
+
+  .intro{
+    margin: auto;
+  }
+  
+  .box{
+    position:absolute;
+    top:150px;
+    left:0;
+    right:0;
+    margin:auto;
+    border-radius:20px;
+  }
+
+  .boxfather{
+    width:100%;
+    position:absolute;
+  }
+
+  .box h1{
+    color:black;
+    font-size: 6em;
+    text-align: center;
+    position: relative;
+    top:70px;
+    font-weight: bold;
+  }
+
+  
+
+  .box button{
+    left:45%;
+    position:relative;
+    top:120px;
+    padding: 8px 20px;
+    cursor:pointer;
+    border:0;
+    outline:none;
+    color:#b160c2;
+    background:#E4E4E4;
+    transition:all .3s ease;
+    font-size: 19px;
+    border-radius:5px;
+  }
+
+  /* Welcome Page Responsive */
+
+  @media (max-width: 900px) {
+    .box{
+      float: none;
+      margin: 0 auto;
+      width: 300px;
+    }
+    .box {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    .box button{
+        left:30%;
+    }
+  }
+  
+  @media (max-width: 780px) {
+    html {
+      font-size: 0.65em;
+    }
+    .page {
+      margin-top: 20px;
+    }
+   
+    .box {
+        float: none;
+        margin: 0 auto;
+        width: 300px;
+        height: 250px;
+        top:180px;
+      }
+      .box {
+        max-width: 250px;
+        margin: 0 auto;
+      }
+      .box button{
+          left:25%;
+      }    
+
+}
+
+  /* End Welcome Page */
+
+  /* Game Page */
+
+  .hangman-letters div, .hangman-results .game-over, .hangman-results .game-over button {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+ 
+}
+
+.hangman {
+  max-width: 700px;
+  width: 90%;
+  margin: 15px auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center; 
+}
+
+.hangman-letters {
+    text-align: center;
+    margin: 30px auto;
+ }
+  
+ .hangman-letters div {
+      background: #b160c2;
+      display: inline-block;
+      padding: 8px 16px 10px;
+      margin: 3px;
+      font-weight: bold;
+      font-size: 26px;
+      cursor: pointer;
+      position: relative;
+      transition: 0.2s;
+      border-radius: 3px; 
+    }
+
+      .hangman-letters div:hover {
+        background: #ddd; 
+    }
+
+      .hangman-letters .disabled {
+      color: #888;
+      background: #ccc;
+      cursor: default;
+      pointer-events: none; 
+    }
+
+      .hangman-letters .disabled:before {
+        content: "\002716";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: normal;
+        font-size: 32px;
+        color: #b160c2; 
+    }
+
+      .hangman-letters .disabled.correct {
+        background: #B3E5DC; 
+    }
+
+      .hangman-letters .disabled.correct:before {
+          color: #298772;
+          content: "\002714"; 
+   }
+
+    
+  .hangman-puzzle {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.hangman-puzzle-letters {
+      display: inline-block;
+      padding: 8px 16px 10px;
+      margin: 4px;
+      border-bottom: 2px solid black;
+      height: 50px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 30px;
+      width: 30px;
+      flex: 1 auto;
+      padding-bottom: 3px; 
+    }
+
+      .hangman-puzzle-letters.space {
+        border: 0; 
+    }
+    
+    .hangman-puzzle-letters.game-lost {
+        color: #b160c2;
+     }
+      @media (max-width: 640px) {
+        .hangman-puzzle-letters {
+          font-size: 24px;
+          width: 20px;
+          height: 36px;
+          padding: 6px 0 8px;
+         } 
+        }
+  
+        .hangman-results {
+    text-align: center;
+    position: relative; 
+}
+    .hangman-results .game-over {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 60px 20px;
+      width: 100%;
+      max-width: 400px;
+      background: rgba(179, 229, 220, 0.95); 
+    }
+
+      .hangman-results .game-over p {
+        font-size: 32px;
+        font-weight: bold;
+     }
+
+      .hangman-results .game-over button {
+        background: #b160c2;
+        color: white;
+        padding: 20px 30px;
+        font-size: 32px;
+        font-family: "Bitter", serif;
+        border: 0;
+        cursor: pointer;
+        transition: 0.2s;
+     }
+
+      @media (max-width: 640px) {
+        .hangman-results .game-over {
+          padding: 30px; 
+        }
+
+          .hangman-results .game-over p {
+            margin-top: 0; 
+        }
+
+          .hangman-results .game-over button {
+            padding: 10px 20px;
+            font-size: 26px; 
+        }
+     }
+
+  .hangman-hangman {
+    max-width: 400px;
+    margin: 0 auto; 
+}
+
+    @media (max-width: 640px) {
+      .hangman-hangman {
+        padding: 0 50px; 
+    }
+ }
+
+  .hangman-svg {
+    width: 100%;
+    height: auto; }
+  @media (max-width: 640px) {
+    .hangman {
+      width: 95%; 
+    } 
+}
+
+/* End Game Page*/
+
+
+    /* Fish Animation */
+      svg#fish {
+        top: 10em;
+      }
+      
+      svg.fish{
+        overflow:visible;
+      }
+      
+      @-webkit-keyframes swim
+      {
+          0% {margin-left: -235px}
+          90% {margin-left: 100%;}
+          100% {margin-left: 100%;}
+      }
+      
+      @keyframes swim
+      {
+          0% {margin-left: -235px}
+          70% {margin-left: 100%;}
+          100% {margin-left: 100%;}
+      }
+      
+      .fish{
+          width: 335px;
+          height: 104px;
+          margin-left: -235px;
+          position: absolute;	
+          animation: swim 15s;
+          -webkit-animation: swim 15s;
+          animation-iteration-count: infinite;
+          -webkit-animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          -webkit-animation-timing-function: linear;
+      }
+      
+      svg #fish1,
+      svg #fish2,
+      svg #fish3,
+      svg #fish4,
+      svg #fish5,
+      svg #fish6 {
+      fill:#b160c2;
+        
+          -moz-animation: bounce 2s infinite;
+        -webkit-animation: bounce 2s infinite;
+        animation: bounce 2s infinite;
+      }
+      
+      @-moz-keyframes bounce {
+        0%, 50%, 100% {
+          -moz-transform: translateY(0);
+          transform: translateY(0);
+        }
+        25% {
+          -moz-transform: translateY(-5px);
+          transform: translateY(-5px);
+        }
+        75% {
+          -moz-transform: translateY(-3px);
+          transform: translateY(-3px);
+        }
+      }
+      @-webkit-keyframes bounce {
+        0%, 50%, 100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+        25% {
+          -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+        }
+        75% {
+          -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+        }
+      }
+      @keyframes bounce {
+        0%, 50%, 100% {
+          -moz-transform: translateY(0);
+          -ms-transform: translateY(0);
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+        25% {
+          -moz-transform: translateY(-5px);
+          -ms-transform: translateY(-5px);
+          -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+        }
+        75% {
+          -moz-transform: translateY(-3px);
+          -ms-transform: translateY(-3px);
+          -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+        }
+      }
+      
+      /* End Fish Animation*/
